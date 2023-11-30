@@ -74,8 +74,8 @@ public class Main {
 		for(int i =0; i<listaFaltas.size(); i++) {
 			strList += listaFaltas.get(i).getNombre()+" - "+listaFaltas.get(i).getPosicion()+"\n";
 		}
-		String listToText = "La lista de personas con infracciones son: \n"+strList;
-		String jenkinsText = "pipeline\n{\nagent any\nstages\n{\nstage (\"Hola Mundo!\")\n{\nsteps\n{\necho ";
+		String listToText = "La lista de personas con infracciones son \n"+strList;
+		String jenkinsText = "pipeline\n{\nagent any\nstages\n{\nstage (\"Hola Mundo!\")\n{\nsteps\n{\nprintln ";
 		jenkinsText += listToText+" }\n}\n}\n}";
 		File file = new File("./Jenkinsfile");
 		
